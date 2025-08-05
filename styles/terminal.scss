@@ -1,0 +1,61 @@
+#terminal {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+  height: 80dvh;
+
+  @media (max-width: 768px) {
+    padding-right: 60px;
+  }
+
+  .welcome {
+    margin-bottom: 30px;
+  }
+}
+
+.output-line {
+  white-space: pre-wrap;
+  margin-bottom: 6px;
+}
+
+.input-line {
+  display: flex;
+  padding: 10px 20px;
+  border-top: 1px solid #fff;
+  height: 10dvh;
+  max-height: 40px;
+  min-height: fit-content;
+  
+  span {
+    margin-right: 8px;
+  }
+
+  #commandInput {
+    flex-grow: 1;
+    background: transparent;
+    border: none;
+    color: #fff;
+    outline: none;
+    font-family: 'Courier New', monospace;
+    font-size: 1em;
+  }
+}
+
+.hints {
+  background: #002200;
+  padding: 10px 20px;
+  font-size: 0.9em;
+  border-top: 1px solid #fff;
+  height: 10dvh;
+  min-height: fit-content;
+}
+
+/* Animación flicker para el texto */
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.flicker {
+  animation: flicker 1s infinite;
+}

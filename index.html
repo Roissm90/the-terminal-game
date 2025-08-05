@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Terminal</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
+    <div id="terminal"></div>
+
+    <div class="input-line">
+      <span>&gt;</span>
+      <input
+        type="text"
+        id="commandInput"
+        autofocus
+        autocomplete="off"
+        spellcheck="false"
+      />
+    </div>
+
+    <div class="hints" id="hints">
+      <p>Usa <code>help</code> para ver los comandos disponibles.</p>
+    </div>
+
+    <div class="countback">
+        <div class="minutes" id="minutes"></div>
+        <div class="seconds" id="seconds"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

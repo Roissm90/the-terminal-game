@@ -1,0 +1,134 @@
+@charset "UTF-8";
+#terminal {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+  height: 80dvh;
+}
+@media (max-width: 768px) {
+  #terminal {
+    padding-right: 60px;
+  }
+}
+#terminal .welcome {
+  margin-bottom: 30px;
+}
+
+.output-line {
+  white-space: pre-wrap;
+  margin-bottom: 6px;
+}
+
+.input-line {
+  display: flex;
+  padding: 10px 20px;
+  border-top: 1px solid #fff;
+  height: 10dvh;
+  max-height: 40px;
+  min-height: fit-content;
+}
+.input-line span {
+  margin-right: 8px;
+}
+.input-line #commandInput {
+  flex-grow: 1;
+  background: transparent;
+  border: none;
+  color: #fff;
+  outline: none;
+  font-family: "Courier New", monospace;
+  font-size: 1em;
+}
+
+.hints {
+  background: #002200;
+  padding: 10px 20px;
+  font-size: 0.9em;
+  border-top: 1px solid #fff;
+  height: 10dvh;
+  min-height: fit-content;
+}
+
+/* Animación flicker para el texto */
+@keyframes flicker {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+.flicker {
+  animation: flicker 1s infinite;
+}
+
+.countback {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 100px;
+  aspect-ratio: 2;
+  display: flex;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: stretch;
+  background-color: #000;
+}
+@media (max-width: 768px) {
+  .countback {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    aspect-ratio: 1/2;
+    width: 40px;
+    padding: 10px 0;
+  }
+}
+.countback::after {
+  position: absolute;
+  display: block;
+  content: ":";
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .countback::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+    top: 50%;
+  }
+}
+.countback .minutes {
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.countback .seconds {
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", monospace;
+  box-sizing: border-box;
+  overflow: hidden auto;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  font-family: "Courier New", monospace;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+}
+
+/*# sourceMappingURL=styles.css.map */
