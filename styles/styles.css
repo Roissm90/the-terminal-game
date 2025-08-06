@@ -26,6 +26,10 @@
   height: 10dvh;
   max-height: 40px;
   min-height: fit-content;
+  position: fixed;
+  width: 100vw;
+  bottom: 10dvh;
+  left: 0;
 }
 .input-line span {
   margin-right: 8px;
@@ -47,6 +51,10 @@
   border-top: 1px solid #fff;
   height: 10dvh;
   min-height: fit-content;
+  width: 100vw;
+  bottom: 0;
+  left: 0;
+  position: fixed;
 }
 
 /* Animación flicker para el texto */
