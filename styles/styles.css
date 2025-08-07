@@ -4,6 +4,7 @@
   padding: 20px;
   overflow-y: auto;
   height: 80dvh;
+  padding-bottom: 20dvh;
 }
 @media (max-width: 768px) {
   #terminal {
@@ -23,6 +24,7 @@
   display: flex;
   padding: 10px 20px;
   border-top: 1px solid #fff;
+  background-color: #000;
   height: 10dvh;
   max-height: 40px;
   min-height: fit-content;
